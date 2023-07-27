@@ -50,4 +50,12 @@ jQuery(document).ready(function ($) {
           }
     });
 
+    $('.task7').on('click','input[type=submit]', function(){
+        let array = [];
+        for (let i = 0; i < 20; i++) {
+            array.push(Math.floor((Math.random()*10) + 1));
+        }
+        console.log(array);
+    });
+
 });
