@@ -55,7 +55,35 @@ jQuery(document).ready(function ($) {
         for (let i = 0; i < 20; i++) {
             array.push(Math.floor((Math.random()*10) + 1));
         }
+        $('.task7').append('<br><br><div>Исходный массив: [' + array.join(', ') + ']</div>');
+        $('.task7').append('<div>Полученный массив: [' + array.sort(function(a, b) { return a - b; }).join(', ') + ']</div>');
         console.log(array);
     });
+
+    $('.task8').on('click','input[type=submit]', function() {
+        let array = ['a', 'b', 'c'];
+        $('.task8').append('<br><br><div>Исходный массив: [' + array.join(', ') + ']</div>');
+
+        array[0] = 'Home';
+        array[1] = 'I bought house';
+        array[2] = 'w';
+        $('.task8').append('<div>Полученный массив: [' + array.join(', ') + ']</div>');
+        console.log(array);
+    });
+
+    function checkFilm(film) {
+        return film == 'Форсаж';
+    }
+
+    $('.task-homework1').on('click','input[type=submit]', function() {
+        
+        if (checkFilm(prompt('Какой у Вас любимый фильм?', 'Титаник'))) {
+            alert('Вы угадали!');
+        } else {
+            alert('Попробуйте ещё раз!');
+        }
+
+    });
+    
 
 });

@@ -1,9 +1,19 @@
 header {
     text-align: center;
 }
+h2 {
+    text-align: center;
+}
+p {
+    font-size: 20px;
+}
 body {
     padding: 20px 50px;
 }
 .task {
-    margin: 20px 0;
+    margin: 40px 0;
+    text-align: center;
+}
+input {
+    font-size: 20px;
 }
